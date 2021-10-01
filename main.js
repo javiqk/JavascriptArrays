@@ -76,3 +76,19 @@ else {
     alert ("Su compra ha sido cancelada");
     alert("¡Esperamos que vuelvas pronto!")
 }
+
+
+/*Función para agregar los productos al index*/
+for (const product of products) {
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `<h1> ID: ${product.id}</h1>
+                            <p>  Producto: ${product.name}</p>
+                            <b> $ ${product.price}</b>`;
+    document.body.appendChild(contenedor);
+}
+
+/*Función para agregar el domicilio de envío al index*/
+let elemento = document.createElement("h1");
+elemento.innerHTML = prompt ("Ingrese su direccion de envío por favor");
+document.body.appendChild(elemento);
+
